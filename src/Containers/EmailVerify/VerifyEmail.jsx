@@ -7,7 +7,7 @@ import styles from "./styles.module.css";
 const VerifyEmail = () => {
 	const [validUrl, setValidUrl] = useState(false);
 	const param = useParams();
-    const url = `/api/auth/signup/${param.id}/verify/${param.token}`;
+    const url = `https://urlshortener-backend-sj.onrender.com/api/auth/signup/${param.id}/verify/${param.token}`;
 
 	useEffect(() => {
 		const verifyEmailUrl = async () => {

@@ -14,7 +14,7 @@ const PasswordReset = () => {
   const [msg, setMsg] = useState("");
   const [error, setError] = useState("");
   const param = useParams();
-  const url = `/api/auth/password-reset/${param.id}/${param.token}`;
+  const url = `https://urlshortener-backend-sj.onrender.com/api/auth/password-reset/${param.id}/${param.token}`;
 
   useEffect(() => {
     const verifyUrl = async () => {

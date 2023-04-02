@@ -6,7 +6,7 @@ const UrlCount = () => {
     const [dailyCount, setDailyCount] = useState(0);
     const [monthlyCount, setMonthlyCount] = useState(0);
 
-    const url = `/api/url/count`;
+    const url = `https://urlshortener-backend-sj.onrender.com/api/url/count`;
 
 	useEffect(() => {
 		const getUrlCount = async () => {

@@ -16,7 +16,7 @@ const ForgotPassword = () => {
         const btnEle = document.getElementById("btn_reset");
         btnEle.disabled = true;
         try {
-            const url = `/api/auth/password-reset`;
+            const url = `https://urlshortener-backend-sj.onrender.com/api/auth/password-reset`;
             const { data } = await axios.post(url, { email });
             setMsg(data.message);
             setError("");

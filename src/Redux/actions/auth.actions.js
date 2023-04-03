@@ -9,12 +9,14 @@ export const signup = (body) => async (dispatch) => {
       type: LOGIN_SUCCESS,
       payload: data.email,
     });
+    btnEle.disabled = false;
   } catch (error) {
     console.error(error);
     if (error.response &&
       error.response.status >= 400 &&
       error.response.status <= 500) {
       toast.error(error.response.data.message);
+      btnEle.disabled = false;
     }
     dispatch({
       type: LOGIN_FAILURE,
@@ -31,12 +33,14 @@ export const login = (body) => async (dispatch) => {
       type: LOGIN_SUCCESS,
       payload: data.email,
     });
+    btnEle.disabled = false;
   } catch (error) {
     console.error(error);
     if (error.response &&
       error.response.status >= 400 &&
       error.response.status <= 500) {
       toast.error(error.response.data.message);
+      btnEle.disabled = false;
     }
     dispatch({
       type: LOGIN_FAILURE,

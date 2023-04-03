@@ -22,6 +22,8 @@ const Signup = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const btnEle = document.getElementById("btn_signup");
+    btnEle.disabled = true;
     props.submitForm(formData);
   };
 
@@ -99,7 +101,7 @@ const Signup = (props) => {
             />
           </Form.Group>
 
-          <Button variant='primary' type='submit'>
+          <Button variant='primary' id='btn_signup' type='submit'>
             Submit
           </Button>
           <hr></hr>

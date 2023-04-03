@@ -26,7 +26,6 @@ function App() {
         <Switch>
           <Route path='/' exact component={Landing} />
           <Route path='/login' exact component={Login} />
-          {/* <Route path='/signup' exact render={() => <Login type='signup' />} /> */}
           <Route path='/register' exact component={Signup} />
           <Route path='/users/:id/verify/:token' exact component={VerifyEmail} />
           <Route path='/forgot-password' exact component={ForgotPassword} />

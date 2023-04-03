@@ -24,7 +24,7 @@ const Signup = (props) => {
     e.preventDefault();
     const btnEle = document.getElementById("btn_signup");
     btnEle.disabled = true;
-    props.submitForm(formData);
+    props.submitForm(formData, btnEle);
   };
 
   return props.isLoggedIn ? (

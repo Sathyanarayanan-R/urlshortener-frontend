@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import Api from '../../Services';
 
 export const signup = (body) => async (dispatch) => {
+  const btnEle = document.getElementById("btn_signup");
   try {
     const { data } = await Api.signup(body);
     dispatch({
@@ -25,6 +26,7 @@ export const signup = (body) => async (dispatch) => {
 };
 
 export const login = (body) => async (dispatch) => {
+  const btnEle = document.getElementById("btn_login");
   try {
     const { data } = await Api.login(body);
     localStorage.setItem('token', data.token);
